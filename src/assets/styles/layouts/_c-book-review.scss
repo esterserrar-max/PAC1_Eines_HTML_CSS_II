@@ -1,13 +1,95 @@
 @use "../variables";
 
 .c-book-review {
+  padding: 2.5rem; 
+  margin-top: 2rem;
+  background-color: variables.$color-bg-light;
+  background-clip: padding-box;
+  border-color: transparent;
+  
+  // Border-style com a solid i transparent
+  border-style: solid;
+  
+  // Gruix de la vora (Dalt: 0, Dreta: 15px, Baix: 0, Esquerra: 15px)
+  border-width: 0 15px; 
+  
+  // Cridem la imatge de la senefa 
+  border-image-source: url('/src/assets/images/bluegreekkeywithlines.svg');
+  border-image-slice: 30%;
+  
+  // Forcem l'ample del patró exactament igual (Dalt: 0, Dreta: 15px, Baix: 0, Esquerra: 15px)
+  border-image-width: 0 15px 0 15px;
+  border-image-repeat: repeat;
+
+  // Paràgrafs i elements interns...
+  p {
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    text-align: justify;
+    hyphens: auto;
+  }
+
   &__title {
     font-family: variables.$font-headings;
+    font-size: 1.3rem;
     color: variables.$color-primary;
   }
 
-  &__section--highlight {
-    background-color: variables.$movie-highlight-bg;
-    border-left: 4px solid variables.$movie-highlight-border;
+  &__subtitle {
+    margin-top: 1.5rem;
+    font-family: variables.$font-headings;
+    font-size: 1.1rem;
+    color: variables.$color-primary;
+    
   }
+
+  &__article {
+    display: flex;
+  }
+
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 5%);
+
+  }
+
+  @media (width >= 768px) {
+      display: flex;       
+      gap: 3rem;           
+      align-items: center; 
+
+      // Columna 1: El text paràgraf (p) a l'esquerra
+      p {
+        flex: 1.2;         
+        margin: 0;        
+      }
+
+      // Columna 2: El contenidor de la imatge (picture) a la dreta
+      picture {
+        flex: 0.8;         
+      }
+
+      &__title{
+        font-size: 1.5rem;
+      }
+
+      &__subtitle{
+        font-size: 1.2rem;
+      }
+
+      picture {
+        flex: 0.8;
+      }
+    }
+
+    
 }
+
+
+
+

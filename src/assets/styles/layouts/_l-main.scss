@@ -1,11 +1,51 @@
 @use "../variables"; 
 
 .l-main {
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  padding: 2rem 1rem; 
+  margin: 0 auto;
   font-family: variables.$font-primary;
   color: variables.$color-text;
-  background-color: variables.$color-bg-light;
+  background-color: variables.$color-bg-light
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .l-main h1{
+    padding-left: 2rem ;
+    font-size: 3rem;
     color: variables.$color-secondary;
+}
+
+.l-main__meta{
+    padding-top: 0.5rem;
+    padding-left: 2.2rem;
+    font-size: 0.7rem;
+}
+
+@media (width >= 768px) {
+    .l-main h1{
+        margin-top: 1rem;
+        font-size: 5rem;
+    }
+
+    .l-main__meta{
+        font-size: 0.8rem;
+    }
+}
+
+@media (width >= 1020px) {
+    .l-main h1{
+        margin-top: 1rem;
+        font-size: 7rem;
+    }
+
+    .l-main__meta{
+        font-size: 1rem;
+    }
 }
