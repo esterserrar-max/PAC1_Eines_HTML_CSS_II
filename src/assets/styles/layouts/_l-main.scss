@@ -1,0 +1,11 @@
+@use "../variables"; 
+
+.l-main {
+  font-family: variables.$font-primary;
+  color: variables.$color-text;
+  background-color: variables.$color-bg-light;
+}
+
+.l-main h1{
+    color: variables.$color-secondary;
+}

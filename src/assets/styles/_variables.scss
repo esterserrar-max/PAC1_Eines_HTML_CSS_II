@@ -1,0 +1,27 @@
+@use "sass:color";
+
+// 1. Tipografies (Fonts)
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif;
+$font-family-serif: "Georgia", "Times New Roman", serif;
+$font-primary: $font-family-serif;       // Per als paràgrafs i comentaris
+$font-headings: $font-family-sans-serif; // Per als títols (h1, h2, h3)
+
+// 2. Paleta de Colors 
+$color-primary: #6798c9;       // Blau marí profund (temàtica marítima de l'Odissea)
+$color-secondary: #c5a059;     // Or clàssic / bronze mitològic (per a detalls o títols)
+$color-text: #2b2b2b;          // Gris fosc per al text principal (més suau que el negre pur)
+$color-bg-light: #fdfbf7;      // Blanc trencat / fons tipus paper antic per a la web
+
+// 3. Variables de la UOC 
+$uoc-corporate: $color-primary;
+$uoc-masterbrand: $color-secondary;
+$uoc-bg: #f4f4f9;
+
+// 4. Secció destacada (El modificador --highlight de la pel·lícula)
+$movie-highlight-bg: #f7f9fa;
+$movie-highlight-border: $color-primary;
+
+// 5. Media Queries (Responsive)
+$mq-mobile-max: 600px;
+$mq-tablet-min: 768px;
+$mq-desktop-min: 1024px;

@@ -1,0 +1,13 @@
+@use "../variables";
+
+.c-book-review {
+  &__title {
+    font-family: variables.$font-headings;
+    color: variables.$color-primary;
+  }
+
+  &__section--highlight {
+    background-color: variables.$movie-highlight-bg;
+    border-left: 4px solid variables.$movie-highlight-border;
+  }
+}
