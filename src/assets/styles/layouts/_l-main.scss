@@ -2,13 +2,17 @@
 
 .l-main {
   align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  padding: 2rem 1rem; 
-  margin: 0 auto;
-  font-family: variables.$font-primary;
+  background-color: variables.$color-bg-light;
   color: variables.$color-text;
-  background-color: variables.$color-bg-light
+  font-family: variables.$font-primary;
+  justify-content: center; 
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0;
+
+  @media (width >= 1020px){
+    max-width: 1200px;
+  }
 }
 
 *{
@@ -17,20 +21,20 @@
 }
 
 .l-main h1{
-    padding-left: 2rem ;
-    font-size: 3rem;
     color: variables.$color-secondary;
+    font-size: 3.5rem;
+    padding-left: 2rem ;
+    padding-top: 2rem;
 }
 
 .l-main__meta{
-    padding-top: 0.5rem;
-    padding-left: 2.2rem;
     font-size: 0.7rem;
+    padding-left: 2.2rem;
+    padding-top: 0.5rem;
 }
 
 @media (width >= 768px) {
     .l-main h1{
-        margin-top: 1rem;
         font-size: 5rem;
     }
 
@@ -41,11 +45,22 @@
 
 @media (width >= 1020px) {
     .l-main h1{
-        margin-top: 1rem;
-        font-size: 7rem;
+        font-size: 8rem;
+        
     }
 
     .l-main__meta{
         font-size: 1rem;
     }
-}
+    }
+
+@media (width >= 1200px) {
+    .l-main h1{
+        font-size: 9rem;
+        
+    }
+
+    .l-main__meta{
+        font-size: 1.2rem;
+    }
+    }

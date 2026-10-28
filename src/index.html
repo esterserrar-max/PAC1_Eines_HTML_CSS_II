@@ -1,127 +1,197 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
-  <meta charset="utf-8" >
-  <meta name="viewport" content="width=device-width" >
-  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- do not remove this line! -->
   <title>Blog sobre l'Odissea</title>
+  <link rel="icon" type="image/jpeg" href="./assets/images/logo-blog.20c60fef.jpg">
 </head>
 
 <body>
+
+  <include src="./views/header.html"></include>
 
   <main class="l-main">
 
     <h1 class="l-main__title">L'Odissea</h1>
     <p class="l-main__meta">Publicat el 16 d'Octubre de 2026</p>
 
-    <div class="c-book-review__wrapper">
-    <article class="c-book-review">
+    <article class="c-book-review" data-aos="fade-up">
 
       <div class="c-book-review__wrapper">
-      <h2 class="c-book-review__title">Un clàssic que segueix sent modern</h2>
-      <p class="c-book-review__introduction">
-        La història de l'Odissea és la continuació de la Iliada. Relata el retorn de l'heroi Odisseu a la seva llar, el regne d'Ítaca. 
-        El seu retorn no és un simple recorregut d'un home que torna a casa, sinó la història d'un home que malgrat tots els entrebancs que els déus, i altres criatures, li posen
-        aconsegueix tornar a casa al cap de 20 anys. Lloc on l'esperen la seva fidel esposa i el seu fill. 
+        <div class="c-book-review__grid-container">
+          <div class="c-book-review__column-text">
+            <h2 class="c-book-review__title" id="presentacio">Un clàssic que segueix sent modern</h2>
+            <p class="c-book-review__introduction">
+              La història de l'Odissea és la continuació de la Iliada. Relata el retorn de l'heroi Odisseu a la seva
+              llar,
+              el regne d'Ítaca.
+              El seu retorn no és un simple recorregut d'un heroi que torna a casa, sinó la història d'un home que
+              malgrat
+              tots els entrebancs que els déus, i altres criatures, li posen
+              aconsegueix tornar a casa al cap de 20 anys. Lloc on l'esperen la seva fidel esposa i el seu fill.
 
-        L'autor de l'obra és Homer, tradicionalment considerat com a poeta grec i autor de la Iliada i l'Odissea. Tanmateix, la seva existència 
-        està avui en discutida per diverses corrents d'investagació, ja alguns investigagers creuen que no va existir i que aquests dos llibres són un recull de la tradició oral 
-        que es va anar passant en generació en generació fins a l'època clàssica, moment en què segurament es van recopilar totes i unir en dos llibres. 
+              L'autor de l'obra és Homer, tradicionalment considerat com a poeta grec, i autor, de la Iliada i l'Odissea.
+              Tanmateix, la seva existència està avui en discutida per diverses corrents d'investagació, ja alguns investigadors 
+              creuen que no va existir. Defensen que els dos cants són un recull de de la tradició oral
+              que es va anar passant en generació en generació fins a l'època clàssica, moment en què segurament es van
+              recopilar tot i es van unir en dos llibres.
 
-        L'autor de l'adaptació de l'obra és Stephen Fry, famos actor, comediant i escriptor del Regne Unit. Va nèixer el 24 d'Agost de 1957 a Hampstead, London. 
-      </p>
+              Per últim, l'autor de l'adaptació de l'obra és Stephen Fry, famos actor, comediant i escriptor del Regne Unit. Va
+              nèixer el 24 d'Agost de 1957 a Hampstead, London.
+            </p>
+          </div>
 
-      <picture>
-          <source type="image/avif" srcset="./assets/images/book-odyssey-small.avif 500w, ./assets/images/book-odyssey-medium.avif 1000w, ./assets/images/book-odyssey-large.avif 1920w" sizes="(max-width: 600px) 100vw, 50vw">
-          <source type="image/webp" srcset="./assets/images/book-odyssey-small.webp 500w, ./assets/images/book-odyssey-medium.webp 1000w, ./assets/images/book-odyssey-large.webp 1920w" sizes="(max-width: 600px) 100vw, 50vw">
-          <img class="c-book-review__image" src="./assets/images/book-odyssey.jpg" alt="Imatge del llibre de l'adaptació de Stephen Fry" 
-          loading="lazy" 
-          width="1000" 
-          height="600">
-      </picture>
+          <div class="c-book-review__column-img">
+            <picture>
+              <source type="image/avif"
+                srcset="./assets/images/book-odyssey-small.avif 500w, ./assets/images/book-odyssey-medium.avif 1000w, ./assets/images/book-odyssey-large.avif 1920w"
+                sizes="(max-width: 600px) 100vw, 50vw">
+              <source type="image/webp"
+                srcset="./assets/images/book-odyssey-small.webp 500w, ./assets/images/book-odyssey-medium.webp 1000w, ./assets/images/book-odyssey-large.webp 1920w"
+                sizes="(max-width: 600px) 100vw, 50vw">
+              <img class="c-book-review__image" src="./assets/images/book2.jpg"
+                alt="Imatge del llibre de l'adaptació de Stephen Fry" loading="lazy" 
+                width="400" height="200">
+            </picture>
+          </div>
+        </div>
+      </div>
       </div>
 
-      <section class="c-book-review__section">
-        
-        <h3 class="c-book-review__subtitle">Què és el que m'ha agradat?</h3>
-
+      <section class="c-book-review__section" data-aos="fade-up">
         <div class="c-book-review__wrapper">
-        <p class="c-book-review__comment">
-          Considero que hi ha diferents raons per les quals podria dir que és una bona història. Una raó és que el motiu de la història és molt humà. És a dir, explica com algú intenta retornar
-          a casa sense rendir-se, encara que tot el teu voltant ho impeideixi. Un segon motiu és que el caracter principal no és perfecte. És un home que mostra tant les seves virtuds com els seus defectes, 
-          i que, tot i ser, considerat un heroi en època clàssica segueix sent molt realista, molt més humà que el concepte d'heroi actual, com podrien ser les històries de Marvel. 
-          I aquesta característica no només es pot observar en ell, sinó també en la resta de caràcters, especialment els déus. Fet que fa que la història sigui més interessant, i fàcil d'imaginar i entendre, per persones
-          atees, ja que els deus són molt humans en comparació amb la religió cristiana, musulmana, etc. Per tant, és més fàcil d'entrar en el món de la mitologia clàssica grega. 
-          Per últim, crec que és un relat que malgrat tenir milers d'anys, segueix tocant temes que no han canviat avui en dia com són l'amor i la fidelitat per la teva parella, l'amor en l'àmbit familiar, 
-          la llar, l'amistat, etc. Per exemple, en la imatge de la dreta es pot observar una representació de quan Odisseu arriba a les portes del seu palau i es retrobar amb el seu gos Argos. Què no hi ha cosa més bonica, i universal, 
-          que l'amor incondicional entre una persona i el seu gos?
-        </p>
+          <div class="c-book-review__grid-container">
+            <div class="c-book-review__column-text">
+              <h3 class="c-book-review__subtitle" id="ressenya">Què és el que m'ha agradat?</h3>
+              <p class="c-book-review__comment">
+                Hi ha diferents raons per les quals podria dir que és una bona història. Una d'elles és que el
+                motiu del protagonista de voler tornar a casa és un sentiment universal. A més a més, el fet d'intentar-ho
+                sense rendir-se, encara que tot el teu voltant ho impeideixi, exalta l'empatia del lector. 
+                
+                Un segon motiu és que el Odisseu no és perfecte. És un home que mostra tant les seves virtuds com els seus defectes,
+                i que, tot i ser considerat un heroi en època clàssica, segueix sent molt realista. Molt més humà que el
+                els herois de Marvel i similars.
+                I aquesta característica no només es pot observar en ell, sinó també en la resta de caràcters,
+                especialment els déus. Fet que fa que la història sigui més interessant, i fàcil d'imaginar i entendre per persones
+                atees, ja que els deus són molt humans en comparació amb la religió cristiana, musulmana, etc. Per tant,
+                és més fàcil d'entrar en el món de la mitologia clàssica grega. 
 
-        <picture>
-          <source type="image/avif" srcset="./assets/images/odysseus-dog-small.avif 500w, ./assets/images/odysseus-dog-medium.avif 1000w, ./assets/images/odysseus-dog-large.avif 1920w" 
-          sizes="(max-width: 600px) 100vw, 50vw">
-          <source type="image/webp" srcset="./assets/images/odysseus-dog-small.webp 500w, ./assets/images/odysseus-dog-medium.webp 1000w, ./assets/images/odysseus-dog-large.webp 1920w" 
-          sizes="(max-width: 600px) 100vw, 50vw">
-          <img class="c-book-review__image" src="./assets/images/odysseus-dog.jpg" alt="Retrobament d'Odisseu amb el seu gos Argos" 
-          loading="lazy" 
-          width="1000" 
-          height="600">
-        </picture>
+                Per últim, crec que és un relat que malgrat tenir milers d'anys, segueix tocant temes que no han canviat
+                avui en dia com són l'amor i la fidelitat per la teva parella. També, la familia, la llar, l'amistat, etc. Per exemple, 
+                en la imatge de la dreta es pot observar una representació de quan Odisseu arriba a les portes del seu palau i es retrobar 
+                amb el seu gos Argos. Què no hi ha cosa més bonica, i universal, que l'amor incondicional entre una persona i el seu gos?
+              </p>
+            </div>
+
+            <div class="c-book-review__column-img">
+              <picture>
+                <source type="image/avif"
+                  srcset="./assets/images/odysseus-dog-small.avif 500w, ./assets/images/odysseus-dog-medium.avif 1000w, ./assets/images/odysseus-dog-large.avif 1920w"
+                  sizes="(max-width: 600px) 100vw, 50vw">
+                <source type="image/webp"
+                  srcset="./assets/images/odysseus-dog-small.webp 500w, ./assets/images/odysseus-dog-medium.webp 1000w, ./assets/images/odysseus-dog-large.webp 1920w"
+                  sizes="(max-width: 600px) 100vw, 50vw">
+                <img class="c-book-review__image" src="./assets/images/odysseus-dog.jpg"
+                  alt="Retrobament d'Odisseu amb el seu gos Argos" loading="lazy" width="1000" height="600">
+              </picture>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="c-book-review__section">
-        <h3 class="c-book-review__subtitle">Per què el recomano?</h3>
-        
+      <section class="c-book-review__section" data-aos="fade-up">
         <div class="c-book-review__wrapper">
-        <p class="c-book-review__comment">
-          Animo a llegir-lo perquè crec que és una bona lectura, ja que crec que trenca la barrera mental de que els llibres clàssics, i sobre tot antics,
-          poden ser aburrits i desfats, quan en aquest cas crec que és tot el contrari. De fet, llegint aquest tipus de noveles et fa sentir més propers amb el passat. 
-          T'anadones que la gent que va viure abans que tu no era tant diferent a nosaltres. Simplement, van viure en diferents moments. 
-          Per acabar, si t'agrada la mitologia grega, i el món clàssic, crec que és un bon punt on començar aprendre, ja que pots observar i entendre una mica millor com eren els grecs.
-        </p>
+          <div class="c-book-review__grid-container">
+            <div class="c-book-review__column-text">
+              <h3 class="c-book-review__subtitle">Per què el recomano?</h3>
+              <p class="c-book-review__comment">
+                Animo a llegir-lo perquè crec que és una bona lectura, ja que crec que trenca la barrera mental de que
+                els
+                llibres clàssics, i sobre tot antics,
+                poden ser aburrits i desfats, quan en aquest cas crec que és tot el contrari. De fet, llegint aquest
+                tipus
+                de noveles et fa sentir més propers amb el passat.
+                T'anadones que la gent que va viure abans que tu no era tant diferent a nosaltres. Simplement, van viure
+                en
+                diferents moments.
+                Per acabar, si t'agrada la mitologia grega, i el món clàssic, crec que és un bon punt on començar
+                aprendre,
+                ja que pots observar i entendre una mica millor com eren els grecs.
+              </p>
+            </div>
 
-        <!-- 3. IMATGE: ODISSEU (S'ha corregit Odysseus-medium.webp 1920w per large) -->
-        <picture>
-          <source type="image/avif" srcset="./assets/images/Odysseus-small.avif 500w, ./assets/images/Odysseus-medium.avif 1000w, ./assets/images/Odysseus-large.avif 1920w" 
-          sizes="(max-width: 600px) 100vw, 50vw">
-          <source type="image/webp" srcset="./assets/images/Odysseus-small.webp 500w, ./assets/images/Odysseus-medium.webp 1000w, ./assets/images/Odysseus-large.webp 1920w" 
-          sizes="(max-width: 600px) 100vw, 50vw">
-          <img class="c-book-review__image" src="./assets/images/Odysseus.jpg" alt="Representació d'Odisseu sobre ceràmica àtica" 
-          loading="lazy" 
-          width="1000" 
-          height="600">
-        </picture>
+            <div class="c-book-review__column-img">
+              <picture>
+                <source type="image/avif"
+                  srcset="./assets/images/Odysseus-small.avif 500w, ./assets/images/Odysseus-medium.avif 1000w, ./assets/images/Odysseus-large.avif 1920w"
+                  sizes="(max-width: 600px) 100vw, 50vw">
+                <source type="image/webp"
+                  srcset="./assets/images/Odysseus-small.webp 500w, ./assets/images/Odysseus-medium.webp 1000w, ./assets/images/Odysseus-large.webp 1920w"
+                  sizes="(max-width: 600px) 100vw, 50vw">
+                <img class="c-book-review__image" src="./assets/images/Odysseus.jpg"
+                  alt="Representació d'Odisseu sobre ceràmica àtica" loading="lazy" width="1000" height="600">
+              </picture>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="c-book-review__section c-book-review__section--highlight">
-        <h3 class="c-book-review__subtitle">La pel·lícula</h3>
-        
-        <div class="c-book-review__wrapper">
-        <p class="c-book-review__comment">
-          AAquet mes de juny passat, Christopher Nolan va portar a les pantalles una adaptació del llibre, que molt ja sabreu ha estat molt controvertida. Es pot dir que és una pel·lícula que, o t'ha agradat, o no t'ha agradat gens. 
-          Des del meu punt de vista, considero que la pel·lícula segueix bastant bé la història original. I aquí alguns direu que Nolan ha canviat coses de la història i que la vestimenta dels soldats no correspon a l'època en què es 
-          suposa que succeix la història (coincideixo en que l'armadura d'Agamamnon és ridicula i que és "too much" i només apreix 3 minuts). I, és veritat que l'autor canvia rols de personatges i fa una interpretació diferent de l'Odissea,
-          però no hem d'oblidar que és la seva interpretació d'un relat que ha anat canviant amb el temps i que no pertany a ningú. El contrari, la mitologia grega no és la Biblia, no és un relat hermetic i intocable, el contrari. És un món
-          en què es pot canviar els finals, o les interpretacions, i seguirà estant bé. I això es pot observar només llegint les diferents version que un mateix mite clàssic té. 
-        </p>
+      <section class="c-book-review__section c-book-review__section--highlight" data-aos="fade-up">
 
-        <!-- 4. IMATGE: LA PEL·LÍCULA (S'ha corregit movie-medium.webp 1920w per large) -->
-         <picture>
-          <source type="image/avif" srcset="./assets/images/movie-small.avif 500w, ./assets/images/movie-medium.avif 1000w, ./assets/images/movie-large.avif 1920w" 
-          sizes="(max-width: 600px) 100vw, 50vw">
-          <source type="image/webp" srcset="./assets/images/movie-small.webp 500w, ./assets/images/movie-medium.webp 1000w, ./assets/images/movie-large.webp 1920w" sizes="(max-width: 600px) 100vw, 50vw">
-          <img class="c-book-review__image" src="./assets/images/movie.jpg" alt="Imatge de la pel·lícula" 
-          loading="lazy" 
-          width="1000" 
-          height="600">
-        </picture>
+        <div class="c-book-review__wrapper">
+          <div class="c-book-review__grid-container">
+            <div class="c-book-review__column-text">
+              <h3 class="c-book-review__subtitle" id="pelicula">La pel·lícula</h3>
+              <p class="c-book-review__comment">
+                L'estiu passat, Christopher Nolan va portar a les pantalles una adaptació del llibre, que com
+                molt
+                ja
+                sabreu ha estat molt controvertida. Es pot dir que és una pel·lícula que, o t'ha agradat, o no t'ha
+                agradat
+                gens.
+                Des del meu punt de vista, considero que la pel·lícula segueix bastant bé la història original. I aquí
+                alguns direu que Nolan ha canviat coses de la història i que la vestimenta dels soldats no correspon a
+                l'època en què es
+                suposa que succeix la història (coincideixo en que l'armadura d'Agamamnon és ridicula i que és "too
+                much"
+                i
+                només apreix 3 minuts). I, és veritat que l'autor canvia rols de personatges i fa una interpretació
+                diferent
+                de l'Odissea,
+                però no hem d'oblidar que és la seva interpretació d'un relat que ha anat canviant amb el temps i que no
+                pertany a ningú. El contrari, la mitologia grega no és la Biblia, no és un relat hermetic i intocable,
+                el
+                contrari. És un món
+                en què es pot canviar els finals, o les interpretacions, i seguirà estant bé. I això es pot observar
+                només
+                llegint les diferents version que un mateix mite clàssic té.
+              </p>
+            </div>
+
+            <div class="c-book-review__column-img">
+              <picture>
+                <source type="image/avif"
+                  srcset="./assets/images/movie-small.avif 500w, ./assets/images/movie-medium.avif 1000w, ./assets/images/movie-large.avif 1920w"
+                  sizes="(max-width: 600px) 100vw, 50vw">
+                <source type="image/webp"
+                  srcset="./assets/images/movie-small.webp 500w, ./assets/images/movie-medium.webp 1000w, ./assets/images/movie-large.webp 1920w"
+                  sizes="(max-width: 600px) 100vw, 50vw">
+                <img class="c-book-review__image" src="./assets/images/movie.jpg" alt="Imatge de la pel·lícula"
+                  loading="lazy" width="1000" height="600">
+              </picture>
+            </div>
+          </div>
         </div>
       </section>
     </article>
-    <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
   </main>
-  </html>
+   <include src="./views/footer.html"></include>
+
+</html>

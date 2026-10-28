@@ -1,0 +1,32 @@
+@use "../variables";
+
+.c-uoc-footer{
+    background-color: variables.$color-primary;
+    border: 6px solid variables.$color-secondary;
+    color: #fff;
+    font-size: 0.7rem;
+    margin: 0.3rem 0 0;   
+    padding: 1.5rem 0;
+    width: 100%;
+
+    @media (width >= 768px){
+        font-size: 0.9rem;
+    }
+
+    
+    
+
+&__container {
+    display: block;
+    margin: 0 auto;   // Centra el contingut
+    max-width: 1200px;
+    padding: 0 1rem;  // Marges de seguretat per a mòbil
+    width: 100%; // O l'amplada màxima del teu disseny
+    }
+
+    &__copy{
+        padding-top: 0.5rem;
+    }
+}
+
+

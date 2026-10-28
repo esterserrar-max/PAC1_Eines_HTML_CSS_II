@@ -5,3 +5,26 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+
+/** Funció pròpia per canviar la unitat de mesura 
+* de píxes a rem 
+*/
+@use "sass:math";
+@use "sass:meta";
+
+// Mida base del navegador (16px)
+$base-font-size: 16px !default;
+
+/* stylelint-disable-next-line scss/at-function-pattern */
+@function pxToRem($pixels) {
+  /* stylelint-disable-next-line scss/no-global-function-names */
+  @if type-of($pixels) == "number" and unit ($pixels) == "px" {
+    $pixels: $pixels / 1px;
+  }
+
+  @return ($pixels / ($base-font-size / 1px)) * 1rem;
+}
+
+// Les teves variables de colors, etc.
+$color-primary: #123456;
+$color-secondary: #f00;

@@ -10,7 +10,15 @@
  * Write any other JavaScript below
  */
 
-+(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-})();
+// Importem la llibreria i els seus estils CSS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 800,
+    once: false,
+    easing: 'ease-in-out'
+  });
+});
+

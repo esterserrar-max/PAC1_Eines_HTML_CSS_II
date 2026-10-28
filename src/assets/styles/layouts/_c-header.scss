@@ -1,0 +1,166 @@
+@use "../variables";
+@use "../dependencies" as dep; 
+
+.c-header {
+  background-color: variables.$color-primary;
+  border: 3px solid variables.$color-secondary;
+  color: #fff;
+  margin: 0;
+  width: 100%;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; // Permet que el menú baixi a sota en mòbil
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0.5rem;
+
+    @media (width >= 1020px) {
+      padding: dep.pxToRem(12.8px);
+    }
+
+    @media (width >= 1200px) {
+      padding: dep.pxToRem(16px);
+    }
+  }
+
+  // Ocultem el checkbox real
+  &__checkbox {
+    display: none;
+  }
+
+  // Botó d'hamburguesa per a mòbil
+  &__toggler {
+    color: #fff;
+    cursor: pointer;
+    display: block; // Visible en mòbil per defecte
+    font-size: dep.pxToRem(28.8px);
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+    @media (width >= 768px) {
+      display: none; // S'amaga en ordinadors/pantalles grans
+    }
+  }
+
+  // Estils del menú desplegable (Mòbil)
+  &__nav {
+    display: none; // Amagat per defecte en mòbil
+    width: 100%; // Ocupa tota l'amplada quan es desplega
+
+    @media (width >= 768px) {
+      display: block !important; // En escriptori sempre està visible
+      margin-left: auto;
+      width: auto;
+    }
+  }
+
+  // Quan el checkbox està marcat, mostrem la navegació en mòbil
+  &__checkbox:checked ~ &__nav {
+    display: block;
+  }
+
+  &__list {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column; // En mòbil, els enllaços van un sota l'altre
+    gap: dep.pxToRem(12.8px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (width >= 768px) {
+      flex-direction: row; // En escriptori, van en horitzontal
+      margin: 0;
+    }
+
+    @media (width >= 1020px) {
+      gap: dep.pxToRem(24px);
+    }
+
+    @media (width >= 1200px) {
+      gap: dep.pxToRem(32px);
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: dep.pxToRem(8px) 0;
+    text-decoration: none;
+  }
+
+  &__link {
+    color: #fff;
+    display: inline-block;
+    font-size: dep.pxToRem(12.8px);
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      transform: translateY(-3px);
+    }
+
+    @media (width >= 768px) {
+      font-size: dep.pxToRem(16px);
+    }
+
+    @media (width >= 1020px) {
+      font-size: dep.pxToRem(17.6px);
+    }
+
+    @media (width >= 1200px) {
+      font-size: dep.pxToRem(20.8px);
+    }
+  }
+
+  &__tagline {
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    padding: 0;
+    text-align: center;
+    width: auto;
+
+    @media (width >= 768px) {
+      font-size: 1.6rem;
+      margin: 0 auto;
+      width: auto;
+    }
+
+    @media (width >= 1020px) {
+      font-size: 1.9rem;
+    }
+
+    @media (width >= 1200px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__brand {
+    align-items: center;
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__logo {
+    display: block;
+    height: auto;
+    max-width: 120px;
+    padding-top: 0;
+
+    @media (width >= 768px) {
+      max-width: 150px;
+    }
+
+    @media (width >= 1200px) {
+      max-width: 180px;
+    }
+  }
+}
